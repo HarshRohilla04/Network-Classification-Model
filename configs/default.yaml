@@ -1,0 +1,53 @@
+
+seed: 42
+task: network_app_classification
+
+data:
+  # Paths are relative to the repository root
+  train_path: ./src/training/SAMSUNG_HACKATHON/output/combined_preview.csv
+  # The notebook performs an internal train/val split, so we reuse the combined file for val.
+  val_path: ./src/training/SAMSUNG_HACKATHON/output/combined_preview.csv
+  test_path: ./src/training/SAMSUNG_HACKATHON/TEST_data/packets.csv
+
+  # Label column produced by the notebook's data concatenation step
+  label_column: __label
+
+  # Features discovered in the training notebook (packet-level tabular features)
+  features:
+    - Length
+    - info_len
+    - digits_in_info
+    - delta_time
+    - src_port
+    - dst_port
+
+model:
+  # Notebook uses LightGBM as the main model (see NODE.ipynb)
+  type: lightgbm
+  params:
+    objective: multiclass
+    # The training set contains 4 classes (videostreaming, gaming, audiostreaming, web_browsing)
+    num_class: 4
+    n_estimators: 500
+    learning_rate: 0.05
+    num_leaves: 31
+    n_jobs: -1
+
+  # If you publish a model, set this path (default produced by the notebook)
+  pretrained_model_path: ./src/training/SAMSUNG_HACKATHON/output/lightgbm_packet_model.pkl
+  protocol_ohe_path: ./src/training/SAMSUNG_HACKATHON/output/ohe_protocol.pkl
+
+train:
+  # LightGBM-specific training uses n_estimators & early stopping rounds instead of epochs/batch size
+  early_stopping_rounds: 50
+  random_seed: 42
+  # If you want a controlled validation split instead of the notebook's internal split, set below
+  # val_split_fraction: 0.2
+
+output_dir: ./src/training/SAMSUNG_HACKATHON/output
+
+metrics:
+  - accuracy
+  - f1_macro
+  - recall_macro
+  - precision_macro
