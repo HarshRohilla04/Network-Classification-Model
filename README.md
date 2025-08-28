@@ -10,12 +10,12 @@ can enable the Network to serve a differentiated and curated QoS for each type o
 an AI model to analyze a traffic pattern and predict the application category with high accuracy.
 
 - **Team name:** 
-<!-- KODE CRACKHEADS -->
+KODE CRACKHEADS 
 
 - **Team members (Names):** 
-<!-- Karan, Shivaansh Kaushik, Gauri Chopra, Harsh Rohilla -->
+Karan, Shivaansh Kaushik, Gauri Chopra, Harsh Rohilla
 
 - **Demo Video Link (YouTube public):** 
-<!-- https://youtu.be/fX2eX5cJ-eg -->
+https://youtu.be/fX2eX5cJ-eg
 
 
