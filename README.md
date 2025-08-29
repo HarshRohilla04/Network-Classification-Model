@@ -1,21 +1,49 @@
-# Network-Traffic-Classification-Model- KODE-CRACKHEADS
+🚀 Network Traffic Classification Model
 
-- **Problem Statement:** 
-Problem Statement #8
-Classify User Application Traffic at the Network in a Multi-UE Connected Scenario
-Applications are affected differently under varying traffic conditions, channel states, and 
-coverage scenarios. If the traffic of each UE can be categorized into broader categories, such as 
-Video Streaming, Audio Calls, Video Calls, Gaming, Video Uploads, browsing, texting etc. that 
-can enable the Network to serve a differentiated and curated QoS for each type of traffic. Develop 
-an AI model to analyze a traffic pattern and predict the application category with high accuracy.
+A machine learning project to classify user application traffic in multi-UE (User Equipment) connected scenarios. The model analyzes traffic patterns and predicts the application category (e.g., Video Streaming, Audio Calls, Gaming, Browsing) with high accuracy.
 
-- **Team name:** 
-KODE CRACKHEADS 
+This work was developed during a hackathon as part of Team KODE CRACKHEADS and later maintained by Harsh Rohilla for portfolio/research purposes.
 
-- **Team members (Names):** 
-Karan, Shivaansh Kaushik, Gauri Chopra, Harsh Rohilla
+🔍 Problem Statement
 
-- **Demo Video Link (YouTube public):** 
-https://youtu.be/fX2eX5cJ-eg
+In real-world networks, applications are affected differently under varying traffic conditions, channel states, and coverage scenarios. Differentiating user traffic into broader categories (e.g., video, audio, gaming, browsing) enables networks to serve optimized QoS (Quality of Service).
 
+The goal: Develop an AI model to analyze traffic patterns and predict the application category with high accuracy.
 
+🛠️ Models Used
+
+🎯 Primary Model: LightGBM Classifier (best tradeoff of accuracy, training time, and inference speed).
+
+🧪 Other Models Experimented:
+
+Random Forest (scikit-learn)
+
+XGBoost
+
+Torch-based LSTM
+
+Torch-based 1D-CNN
+
+⚙️ Tech Stack
+
+Languages: Python
+
+Libraries: scikit-learn, LightGBM, XGBoost, PyTorch, Pandas, NumPy
+
+Environment: Jupyter Notebook / Google Colab
+
+📊 Results
+
+LightGBM outperformed other models in terms of accuracy and efficiency.
+
+Successfully classified network traffic into application-level categories with high accuracy.
+
+🎥 Demo
+
+Watch on YouTube
+
+👨‍💻 Contributors
+
+Harsh Rohilla (Maintainer)
+
+Karan, Shivaansh Kaushik, Gauri Chopra (Hackathon teammates)
