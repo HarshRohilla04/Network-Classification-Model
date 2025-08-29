@@ -11,18 +11,25 @@ The goal: Develop an AI model to analyze traffic patterns and predict the applic
 🛠️ Models Used
 🎯 Primary Model: LightGBM Classifier (best tradeoff of accuracy, training time, and inference speed).
 🧪 Other Models Experimented:
+
 1)Random Forest (scikit-learn)
+
 2)XGBoost
+
 3)Torch-based LSTM
+
 4)Torch-based 1D-CNN
 
 ⚙️ Tech Stack
 Languages: Python
+
 Libraries: scikit-learn, LightGBM, XGBoost, PyTorch, Pandas, NumPy
+
 Environment: Jupyter Notebook / Google Colab
 
 📊 Results
 LightGBM outperformed other models in terms of accuracy and efficiency.
+
 Successfully classified network traffic into application-level categories with high accuracy.
 
 🎥 Demo
